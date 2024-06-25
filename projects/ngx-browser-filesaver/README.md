@@ -1,3 +1,24 @@
+WORK IN PROGRESS
+
+This package uses File System API - Web Api to save the files when it is supported by browser and user allow to use it (by setting useFileSystemApi in options).
+otherwise it follows legacy approach to download the files 
+
+user must provide blob and fileName for it to work.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # NgxBrowserFilesaver
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
