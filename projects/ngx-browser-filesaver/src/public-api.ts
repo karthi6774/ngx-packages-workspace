@@ -3,4 +3,5 @@
  */
 
 export * from './lib/ngx-browser-filesaver.service';
+export * from './lib/ngx-browser-filesaver.model';
 
