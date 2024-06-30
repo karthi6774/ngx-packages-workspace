@@ -1,6 +1,7 @@
 {
   "name": "ngx-browser-filesaver",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "A Angular wrapper around File System API -> showSaveFilePicker method to download files.If File System API is not available then fall back to HTML5 saveAs(legacy)",
   "peerDependencies": {
     "@angular/common": "^18.0.0",
     "@angular/core": "^18.0.0"
@@ -8,5 +9,22 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karthi6774/ngx-packages-workspace.git"
+  },
+  "keywords": [
+    "File System API",
+    "showSaveFilePicker",
+    "Angular Wrapper for Web Api",
+    "HTML5 saveAs",
+    "Save Files in Angular"
+  ],
+  "author": "Karthik K C karthik.kc.dev@gmail.com",
+  "homepage": "https://github.com/karthi6774/ngx-packages-workspace",
+  "bugs": {
+    "url": "https://github.com/karthi6774/ngx-packages-workspace/issues"
+  }
 }
