@@ -24,12 +24,17 @@ export class NgxBrowserFilesaverService {
   private async saveFileByFileSystemApi(blob: Blob, fileName: string) {
     try {
       // Show the file save dialog.
-      const handle = await this.window?.showSaveFilePicker({ suggestedName: fileName });
-      // Write the blob to the file.
-      const writable = await handle?.createWritable();
-      await writable?.write(blob);
-      await writable?.close();
-      return RESPONSE.SUCCESS;
+      if (this.window?.showSaveFilePicker) {
+        // Show the file save dialog.
+        const handle = await this.window.showSaveFilePicker({ suggestedName: fileName });
+        // Write the blob to the file.
+        const writable = await handle.createWritable();
+        await writable.write(blob);
+        await writable.close();
+        return RESPONSE.SUCCESS;
+      } else {
+        throw new Error('File System Access API is not supported');
+      }
     } catch (error: unknown) {
       // Fail silently if there is a error.
       const err = error as unknown as Error;
